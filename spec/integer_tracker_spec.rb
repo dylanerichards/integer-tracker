@@ -4,8 +4,7 @@ describe IntegerTracker do
   let(:integer_tracker) { IntegerTracker.new }
 
   before do
-    integer_tracker.track(1)
-    integer_tracker.track(0)
+    [1, 0].each { |num| integer_tracker.track(num) }
   end
 
   describe "#track" do
